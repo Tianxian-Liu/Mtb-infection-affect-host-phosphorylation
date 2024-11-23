@@ -1,0 +1,32 @@
+GOBP,SIZE,NES,FDR_qval,GeneRatio,Type,_log10Pvalue
+mRNA processing,21,21,2.94E-06,4.694815195,1,5.532143956
+RNA splicing,19,19,3.63E-06,4.960731415,1,5.439598623
+posttranscriptional regulation of gene expression,18,18,1.38E-04,4.032407407,1,3.860984917
+regulation of mRNA metabolic process,13,13,2.18E-04,5.320958647,1,3.661358719
+regulation of multi-organism process,14,14,0.001206782,4.153269755,1,2.918371327
+B cell activation,11,11,0.001334012,5.140021459,1,2.874840123
+response to interferon-gamma,10,10,0.001334012,5.670572917,1,2.874840123
+translational initiation,9,9,0.006811123,5.103515625,1,2.166781263
+RNA catabolic process,12,12,0.006811123,3.831378299,1,2.166781263
+type I interferon production,7,7,0.006903002,6.744469027,1,2.160961972
+response to type I interferon,6,6,0.012923682,7.33988764,1,1.888613751
+ribonucleoprotein complex biogenesis,13,13,0.014648963,3.216761364,1,1.83419311
+regulation of cellular amide metabolic process,12,12,0.014648963,3.393506494,1,1.83419311
+regulation of protein complex assembly,13,13,0.014648963,3.166387025,1,1.83419311
+integrin-mediated signaling pathway,6,6,0.01889428,6.467821782,1,1.72366965
+homeostasis of number of cells,9,9,0.021685755,3.999489796,1,1.663825456
+ribonucleoprotein complex subunit organization,9,9,0.021685755,3.999489796,1,1.663825456
+chromatin assembly or disassembly,7,7,0.025763499,4.916935484,1,1.588995158
+spindle localization,4,4,0.025763499,10.36904762,1,1.588995158
+negative regulation of organelle organization,11,11,0.025763499,3.22809973,1,1.588995158
+mitochondrion localization,4,4,0.025763499,10.12790698,1,1.588995158
+response to virus,10,10,0.028012392,3.413009404,1,1.552649805
+response to interferon-alpha,3,3,0.028477772,16.33125,1,1.545493996
+regulation of apoptotic signaling pathway,11,11,0.028894295,3.110714286,1,1.539187895
+non-recombinational repair,5,5,0.028894295,6.720679012,1,1.539187895
+regulation of chromosome organization,10,10,0.028894295,3.309270517,1,1.539187895
+regulation of supramolecular fiber organization,10,10,0.028894295,3.309270517,1,1.539187895
+execution phase of apoptosis,5,5,0.030155561,6.55873494,1,1.520632591
+intrinsic apoptotic signaling pathway,9,9,0.037234283,3.438157895,1,1.429057001
+microtubule bundle formation,5,5,0.037477579,6.116573034,1,1.426228477
+microtubule cytoskeleton organization involved in mitosis,6,6,0.037477579,4.948863636,1,1.426228477

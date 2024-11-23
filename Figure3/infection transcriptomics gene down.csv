@@ -1,0 +1,19 @@
+GOBP,SIZE,NES,FDR.qval,GeneRatio,Type,бо-log10Pvalue
+chromosome segregation,24,24,1.23E-12,8.194244604,1,11.91122749
+organelle fission,24,24,2.85E-09,5.569944045,1,8.545120762
+mitotic cell cycle phase transition,22,22,2.55E-07,4.812225784,1,6.593255448
+microtubule cytoskeleton organization involved in mitosis,11,11,9.36E-06,8.877098321,1,5.028612718
+cytokinesis,11,11,5.04E-05,7.369666531,1,4.297537792
+cell cycle G1/S phase transition,13,13,7.62E-05,5.606588413,1,4.117832524
+regulation of cell cycle phase transition,16,16,7.62E-05,4.415551497,1,4.117832524
+spindle organization,11,11,7.62E-05,6.695868448,1,4.117832524
+negative regulation of mitotic cell cycle,13,13,7.62E-05,5.40948179,1,4.117832524
+cell cycle checkpoint,12,12,7.62E-05,5.918065548,1,4.117832524
+negative regulation of cell cycle process,13,13,1.54E-04,4.981393303,1,3.812174433
+positive regulation of cell cycle,15,15,1.54E-04,4.272400262,1,3.812174433
+regulation of cell division,10,10,1.54E-04,6.742099991,1,3.812174433
+chromosome localization,7,7,4.75E-04,9.559952038,1,3.323131976
+DNA replication,12,12,4.75E-04,4.769784173,1,3.323131976
+regulation of chromosome organization,12,12,0.003363784,3.885416894,1,2.47317191
+DNA conformation change,9,9,0.025437856,3.913169872,1,1.594519496
+synapse organization,11,11,0.045496288,3.043576567,1,1.342024035

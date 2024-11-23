@@ -1,0 +1,19 @@
+GOBP,SIZE,NES,FDR.qval,GeneRatio,Type,#NAME?
+mRNA processing,108,108,1.00E-16,5.330662151,1,16
+RNA splicing,97,97,1.00E-16,5.591419073,1,16
+ribonucleoprotein complex biogenesis,59,59,2.26E-13,3.223188459,2.26E-13,12.6449596
+RNA localization,41,41,2.26E-13,4.322503702,2.26E-13,12.6449596
+ribonucleoprotein complex localization,29,29,6.48E-12,5.445959314,6.48E-12,11.18842488
+"DNA-templated transcription, elongation",25,25,1.55E-11,6.131973893,1.55E-11,10.81098954
+regulation of chromosome organization,45,45,1.38E-10,3.287781747,1.38E-10,9.858977629
+posttranscriptional regulation of gene expression,52,52,2.36E-08,2.571896211,2.36E-08,7.627339757
+mitotic cell cycle phase transition,45,45,1.90E-05,2.22110923,1.90E-05,4.721432382
+regulation of GTPase activity,42,42,1.02E-04,2.138915639,1.02E-04,3.990286864
+cell cycle checkpoint,25,25,1.20E-04,2.782099266,1.20E-04,3.919242234
+ncRNA transcription,16,16,1.71E-04,3.698051948,1.71E-04,3.766662422
+regulation of cell cycle phase transition,35,35,3.36E-04,2.179551342,3.36E-04,3.473308822
+double-strand break repair,22,22,0.002420168,2.42578637,0.002420168,2.616154397
+DNA replication,25,25,0.002810611,2.242288961,0.002810611,2.551199222
+cell cycle G2/M phase transition,21,21,0.00422713,2.369878361,0.00422713,2.373954426
+response to virus,26,26,0.013494169,1.959156048,0.013494169,1.869853854
+gene silencing,18,18,0.026060005,2.14194098,0.026060005,1.584025502

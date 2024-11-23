@@ -1,0 +1,143 @@
+---
+title: "Figure 3"
+author: "tianxian"
+date: "2024-11-23"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## R Markdown
+
+This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+
+When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+
+```{r cars}
+summary(cars)
+```
+
+## Including Plots
+
+You can also embed plots, for example:
+
+```{r pressure, echo=FALSE}
+plot(pressure)
+```
+
+Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
+
+Figure 3B
+```{r}
+colnames(a)
+install.packages("ggpubr")
+BiocManager::install('ggExtra')
+library('ggExtra')
+library(ggplot2)
+library(ggpubr)
+
+a <- read.csv("protein RNA correlation.csv",header=T,sep=",",check.names=F)
+
+MG <- a
+
+P <- ggplot(MG, aes(x=RNA, y=protein)) + 
+  geom_point(size=5)+ geom_smooth(method = 'lm', se = T, color = 'skyblue4',size=2.5,alpha=0.7)+
+  theme_bw()+stat_cor(data=MG, method = "pearson",size=7,face='bold')+
+ # ylab(Genes[n])+
+  theme(plot.title = element_text(hjust = 0.5,size = 18,color="black"),
+        axis.ticks = element_line(size = 1),
+        axis.ticks.length = unit(2,'mm'),
+        axis.text= element_text(size = 21,color='black'),
+        axis.title = element_text(size = 24),
+        aspect.ratio = 1,
+        panel.border = element_rect(fill=NA,color="black", size=1, linetype="solid")
+  )
+print(ggMarginal(P, color="black",alpha=0.5,
+                 xparams = list(fill = "brown", size = 0.75),
+                 yparams = list(fill = "skyblue4", size =0.75)))
+
+plot.new()
+
+dev.off()
+```
+
+Figure 3D
+```{r}
+gsea_res <- read.csv("infection transcriptomics gene up.csv",header = TRUE, sep =",")
+gsea_df = as.data.frame(gsea_res)
+df_for_plot=data.frame(Description=gsea_df$GOBP, effect_size=gsea_df$NES, FDR=gsea_df$FDR_qval, set_size=gsea_df$SIZE)
+text_list=list(FDR='Pvalue',setSize='gene number',effect_size='Rich factor')
+##
+
+plot_enrich_result <- function(df_for_plot, 
+                               text_list=text_list, 
+                               param_list=NULL, 
+                               filename="KEGG_PY-U7D-1-0", 
+                               width=10, height=6, show_num=15){
+  
+  df_for_plot = df_for_plot[order(df_for_plot$FDR),][c(1:show_num),]
+  #
+  df_for_plot$Description = factor(df_for_plot$Description, levels = as.vector(df_for_plot[order(df_for_plot$effect_size),][['Description']]))
+  
+  pp = ggplot(df_for_plot,aes(x=effect_size,y=Description))
+  #pp + geom_point()
+  #pp + geom_point(aes(size=setSize))
+  pbubble = pp + geom_point(aes(size=set_size,color=-1*log10(FDR)))
+  #pbubble + scale_colour_gradient(low="blue",high="red")
+  pr = pbubble + scale_colour_gradient(low="blue",high="red") 
+  pr = pr + labs(color=expression(-log[10](FDR)),
+                 size=text_list$setSize,
+                 x=text_list$effect_size,
+                 y=text_list$y,
+                 title=text_list$title)
+  pr = pr + theme_bw()
+  plot(pr)
+  
+  if (is.null("KEGG_PY-U7D-1-0")!=TRUE){
+    ggsave("KEGG_PY-U7D-1-0.pdf", dpi=100, width=width, height=height)
+  }
+}
+plot_enrich_result(df_for_plot, text_list=text_list)
+```
+
+Figure 3E
+```{r}
+gsea_res <- read.csv("infection transcriptomics gene down.csv",header = TRUE, sep =",")
+gsea_df = as.data.frame(gsea_res)
+df_for_plot=data.frame(Description=gsea_df$GOBP, effect_size=gsea_df$NES, FDR=gsea_df$FDR_qval, set_size=gsea_df$SIZE)
+text_list=list(FDR='Pvalue',setSize='gene number',effect_size='Rich factor')
+##
+
+plot_enrich_result <- function(df_for_plot, 
+                               text_list=text_list, 
+                               param_list=NULL, 
+                               filename="KEGG_PY-U7D-1-0", 
+                               width=10, height=6, show_num=15){
+  
+  df_for_plot = df_for_plot[order(df_for_plot$FDR),][c(1:show_num),]
+  #
+  df_for_plot$Description = factor(df_for_plot$Description, levels = as.vector(df_for_plot[order(df_for_plot$effect_size),][['Description']]))
+  
+  pp = ggplot(df_for_plot,aes(x=effect_size,y=Description))
+  #pp + geom_point()
+  #pp + geom_point(aes(size=setSize))
+  pbubble = pp + geom_point(aes(size=set_size,color=-1*log10(FDR)))
+  #pbubble + scale_colour_gradient(low="blue",high="red")
+  pr = pbubble + scale_colour_gradient(low="blue",high="red") 
+  pr = pr + labs(color=expression(-log[10](FDR)),
+                 size=text_list$setSize,
+                 x=text_list$effect_size,
+                 y=text_list$y,
+                 title=text_list$title)
+  pr = pr + theme_bw()
+  plot(pr)
+  
+  if (is.null("KEGG_PY-U7D-1-0")!=TRUE){
+    ggsave("KEGG_PY-U7D-1-0.pdf", dpi=100, width=width, height=height)
+  }
+}
+plot_enrich_result(df_for_plot, text_list=text_list)
+```
+
